@@ -8,8 +8,20 @@ body {
   width: 1440px;
   margin: 0 auto;
   padding: 0;
+  display: grid;
+  grid-template-columns: 565px 330px 447px;
+  grid-template-rows: 101px 479px 476px 101px;
+  grid-template-areas:
+    "header header header"
+    "slogan portrait work"
+    "about portrait work"
+    "about contact socials";
+  gap: 0px;
+  position: relative;
+  min-height: 1024px;
 }
 .header {
+  grid-area: header;
   background: #FADCD9;
   border-radius: 20px;
   margin: 24px 0 0 24px;
@@ -46,14 +58,13 @@ body {
   text-transform: uppercase;
 }
 .slogan {
+  grid-area: slogan;
   background: #FADCD9;
   border-radius: 20px;
   margin: 24px 0 0 24px;
   width: 565px;
   height: 479px;
-  position: absolute;
-  top: 146px;
-  left: 24px;
+  margin: 24px 0 0 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,9 +83,8 @@ body {
   margin-left: 416px;
 }
 .portrait {
-  position: absolute;
-  top: 149px;
-  left: 614px;
+  grid-area: portrait;
+  margin: 24px 0 0 24px;
   width: 330px;
   height: 476px;
   background: #fff;
@@ -90,9 +100,8 @@ body {
   object-fit: cover;
 }
 .work {
-  position: absolute;
-  top: 149px;
-  left: 968px;
+  grid-area: work;
+  margin: 24px 0 0 24px;
   width: 447px;
   height: 726px;
   background: #FADCD9;
@@ -139,9 +148,8 @@ body {
   display: inline-block;
 }
 .about {
-  position: absolute;
-  top: 649px;
-  left: 24px;
+  grid-area: about;
+  margin: 24px 0 0 24px;
   width: 448px;
   height: 351px;
   background: #FADCD9;
@@ -163,9 +171,8 @@ body {
   border-radius: 50%;
 }
 .contact {
-  position: absolute;
-  top: 649px;
-  left: 496px;
+  grid-area: contact;
+  margin: 24px 0 0 24px;
   width: 448px;
   height: 351px;
   background: #F8AFA6;
@@ -189,9 +196,8 @@ body {
   font-weight: 300;
 }
 .socials {
-  position: absolute;
-  top: 899px;
-  left: 968px;
+  grid-area: socials;
+  margin: 24px 0 0 24px;
   width: 448px;
   height: 101px;
   background: #FADCD9;
